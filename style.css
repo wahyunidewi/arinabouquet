@@ -208,34 +208,24 @@ textarea:focus, select:focus {
 
 /* ==================== STYLING POIN 2: NAVBAR ==================== */
 .custom-navbar {
-    background-color: #4a3e3d !important; /* Cokelat gelap hangat premium */
+    background-color: #4A3E3D; /* Warna cokelat gelap sesuai screenshot */
     padding: 15px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
-
 .navbar-brand-custom {
-    color: #f1ede6 !important;
-    font-size: 20px;
+    color: #ffffff;
     font-weight: 700;
     text-decoration: none;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
-
-.navbar-links-custom {
-    display: flex;
-    gap: 20px;
-}
-
 .nav-link-item {
-    color: #dcd3ca;
+    color: #dcd6d0;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s;
+    margin-left: 20px;
+    transition: color 0.2s;
 }
-
 .nav-link-item:hover, .nav-link-item.active {
-    color: #ffffff; /* Berubah putih terang saat diarahkan mouse */
+    color: #ffffff;
+    font-weight: 600;
 }
 
 
