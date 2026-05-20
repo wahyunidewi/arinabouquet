@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Gift Box - Arina Bouquet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar mb-5">
+    <div class="container">
+        <a class="navbar-brand-custom" href="index.html">ARINA BOUQUET</a>
+        <div class="navbar-links-custom">
+            <a href="index.html" class="nav-link-item">Katalog</a>
+            <a href="custom-box.html" class="nav-link-item active">Custom Box</a>
+            <a href="#" class="nav-link-item">Testimoni</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mb-5">
+    <div class="product-container row align-items-center p-4">
+        
+        <div class="col-md-5 text-center">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=500" class="img-fluid product-image" alt="Custom Gift Box">
+        </div>
+
+        <div class="col-md-7 product-right">
+            <span class="badge mb-2" style="background-color: #7b622b !important;">EKSKLUSIF</span>
+            <h1 id="nama-produk" class="mt-1">Rancang Custom Gift Box Kamu</h1>
+            <p class="description" style="margin-bottom: 15px;">Pilih jenis kotak, ukuran, dan tentukan budget hadiahmu sendiri. Kami akan merakit hampers terbaik sesuai keinginanmu!</p>
+            
+            <form id="form-custom-box">
+                <div class="mb-3">
+                    <label class="form-label"><b>1. Pilih Tipe Box:</b></label>
+                    <select class="form-select" id="tipe-box">
+                        <option value="Hardbox Premium Block">Hardbox Premium (Polos Elegan)</option>
+                        <option value="Rustic Craft Box">Rustic Craft Box (Tema Estetik Cokelat)</option>
+                        <option value="Transparent Acrylic Box">Acrylic Box (Mewah Transparan)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><b>2. Ukuran Box:</b></label>
+                    <select class="form-select" id="ukuran-box">
+                        <option value="Small (15x15 cm)">Small - Cocok untuk hijab / perhiasan</option>
+                        <option value="Medium (22x22 cm)">Medium - Cocok untuk kemeja / boneka kecil</option>
+                        <option value="Large (30x25 cm)">Large - Paket komplit mukena / snack besar</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><b>3. Patokan Budget Isi Hadiah (Rp):</b></label>
+                    <input type="number" class="form-control" id="budget-box" placeholder="Contoh: 150000" required>
+                    <small class="text-muted" style="font-size: 12px;">*Isi box akan kami sesuaikan dengan nominal budget ini.</small>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label"><b>4. Request Isi & Tulisan Kartu Ucapan:</b></label>
+                    <textarea class="form-control" id="request-isi" rows="3" placeholder="Sebutkan request isi (misal: jilbab bella square hitam, coklat silverqueen) dan tulisan ucapan..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-keranjang">Kirim Konsep via WhatsApp</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+    document.getElementById('form-custom-box').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        let tipeBox   = document.getElementById('tipe-box').value;
+        let ukuranBox = document.getElementById('ukuran-box').value;
+        let budget    = document.getElementById('budget-box').value;
+        let request   = document.getElementById('request-isi').value;
+
+        // FORMAT RUPIAH SEDERHANA
+        let budgetFormat = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(budget);
+
+        // GANTI DENGAN NOMOR WA KAMU (KODE NEGARA 62 DI DEPAN)
+        let nomorWhatsApp = "+62 858-3214-6120"; 
+
+        let teksPesan = `Halo Arina Bouquet, saya ingin memesan *CUSTOM GIFT BOX*:%0A%0A` +
+                        `*1. Tipe Box:* ${tipeBox}%0A` +
+                        `*2. Ukuran:* ${ukuranBox}%0A` +
+                        `*3. Patokan Budget:* ${budgetFormat}%0A` +
+                        `*4. Request Isi & Ucapan:*%0A"${request}"%0A%0A` +
+                        `Mohon info ketersediaan barang dan totalannya ya Kak!`;
+
+        let linkWA = `https://api.whatsapp.com/send?phone=${nomorWhatsApp}&text=${teksPesan}`;
+        window.open(linkWA, '_blank');
+    });
+</script>
+
+</body>
+</html>
