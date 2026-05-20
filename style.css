@@ -1,0 +1,251 @@
+/* Tambahkan aturan ini di baris paling atas untuk override font bawaan Bootstrap */
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+    background-color: #f7f3ed; 
+    color: #333;
+    padding: 40px 0;
+}
+
+.product-container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* Pastikan padding di sisi kiri dan kanan seimbang */
+.product-left, .product-right {
+    padding: 40px !important;
+}
+
+.product-image {
+    width: 100%;
+    height: 450px; /* Batasi tinggi gambar biar seragam dan estetik */
+    border-radius: 12px;
+    object-fit: cover; /* Biar foto tidak gepeng */
+}
+
+.badge {
+    background-color: #1e7e45 !important; /* Memastikan warna hijau gelap premium aktif */
+    color: white;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.price {
+    color: #b54747; 
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px 0 15px 0;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Mempercantik elemen form bawaan bootstrap */
+.form-control, .form-select {
+    border: 1px solid #e2dcd5 !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+    background-color: #fafafa !important;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #b54747 !important;
+    box-shadow: 0 0 0 0.2rem rgba(181, 71, 71, 0.15) !important;
+}
+
+/* Tombol utama */
+.btn-keranjang {
+    width: 100%;
+    background-color: #2b597b; 
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-keranjang:hover {
+    background-color: #1f425c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(43, 89, 123, 0.3);
+}
+/* 1. Mengatur Background Halaman & Font Global */
+body {
+    background-color: #f7f3ed; /* Warna krem estetik, bukan putih polos */
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #333;
+    padding: 40px;
+}
+
+/* 2. Membuat Layout Kiri-Kanan (Responsive) */
+.product-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Efek bayangan halus */
+}
+
+.product-left, .product-right {
+    flex: 1;
+    padding: 40px;
+}
+
+/* 3. Merapikan Gambar Produk */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* 4. Menghias Teks & Badge Hijau */
+.badge {
+    background-color: #1e7e45;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-top: 15px;
+    color: #2c2523; /* Cokelat sangat gelap agar elegan */
+}
+
+.price {
+    color: #b54747; /* Warna merah marun/terakota lembut, tidak merah menyala */
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* 5. Mempercantik Input Form & Textarea */
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* Efek saat input diklik */
+textarea:focus, select:focus {
+    border-color: #bc8f8f; 
+    outline: none;
+    background-color: #fff;
+}
+
+/* 6. Mengubah Tombol Biru Menjadi Premium Soft-Button */
+.product-right button, .btn-keranjang {
+    width: 100%;
+    background-color: #2b597b; /* Mengubah biru gonjreng menjadi Navy-Slate yang mewah */
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px; /* Membuat tombol lonjong melengkung modern */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(43, 89, 123, 0.2);
+}
+
+/* Efek hover saat tombol didekati mouse */
+.product-right button:hover {
+    background-color: #1f425c;
+    transform: translateY(-2px); /* Efek sedikit terangkat */
+    box-shadow: 0 6px 20px rgba(43, 89, 123, 0.3);
+}
+
+/* ==================== STYLING POIN 2: NAVBAR ==================== */
+.custom-navbar {
+    background-color: #4a3e3d !important; /* Cokelat gelap hangat premium */
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand-custom {
+    color: #f1ede6 !important;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.navbar-links-custom {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link-item {
+    color: #dcd3ca;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link-item:hover, .nav-link-item.active {
+    color: #ffffff; /* Berubah putih terang saat diarahkan mouse */
+}
+
+
+/* ==================== STYLING POIN 1: FOTO PRODUK ==================== */
+.product-image {
+    width: 100%;
+    height: 480px; /* Membatasi tinggi frame foto agar seimbang dengan form kanan */
+    border-radius: 15px; /* Sudut foto melengkung lembut */
+    object-fit: cover; /* KUNCI UTAMA: foto otomatis terpotong rapi tanpa membuat jajan gepeng */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Bayangan estetik di bawah foto */
+    transition: transform 0.5s ease;
+}
+
+/* Efek interaktif: Foto akan sedikit membesar pelan saat disentuh cursor */
+.product-image:hover {
+    transform: scale(1.02);
+}

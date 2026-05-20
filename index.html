@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Toko Hadiah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar mb-5">
+    <div class="container">
+        <a class="navbar-brand-custom" href="#">ARINA BOUQUET</a>
+        
+        <div class="navbar-links-custom">
+            <a href="#" class="nav-link-item active">Katalog</a>
+            <a href="#" class="nav-link-item">Custom Box</a>
+            <a href="#" class="nav-link-item">Testimoni</a>
+        </div>
+    </div>
+</nav>
+<div class="container mb-5">
+    <div class="col-md-6 product-left">
+    <img src="buket-choco.jpg" class="img-fluid product-image" alt="Buket Snack Choco Berry">
+</div>
+
+        <div class="col-md-6 product-right">
+            <span class="badge mb-2" id="kategori-produk">BUKET</span>
+            <h1 id="nama-produk" class="mt-2">Buket Snack Arina Adiba</h1>
+            <h2 class="price">minimal pemesanan Rp 75.000</h2>
+            <p class="description">Buket jajan serba cokelat, cocok untuk hadiah wisuda, seminar proposal, atau ulang tahun teman dekat.</p>
+            
+            <form id="form-pemesanan">
+                <div class="mb-3">
+                    <label class="form-label"><b>Isi Kartu Ucapan:</b></label>
+                    <textarea class="form-control" rows="3" placeholder="Contoh: Happy Graduation yaa! Semoga sukses..." required></textarea>
+                </div>
+
+                <div id="opsi-buket" class="mb-4">
+                    <label class="form-label"><b>Pilih Warna Kertas Pembungkus (Wrapping):</b></label>
+                    <select class="form-select" id="warna-wrapping">
+                        <option value="Pink Soft">Pink Soft (Estetik)</option>
+                        <option value="Navy Blue">Navy Blue (Maskulin)</option>
+                        <option value="Black Gold">Black Gold (Eksklusif)</option>
+                        <option value="Sage Green">Sage Green (Kekinian)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-keranjang">Masukkan Keranjang</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+
+</html>
+
+<script>
+    document.getElementById('form-pemesanan').addEventListener('submit', function(event) {
+        // Mencegah halaman refresh otomatis
+        event.preventDefault(); 
+
+        // 1. Ambil data dari inputan pembeli
+        let namaProduk = document.getElementById('nama-produk').innerText;
+        let ucapan = document.querySelector('textarea').value;
+        let warnaWrapping = document.getElementById('warna-wrapping').value;
+
+        // 2. Atur nomor WhatsApp tokomu (Gunakan kode negara 62, jangan pakai angka 0 di depan)
+        // Contoh: jika 081234567890 ganti jadi 6281234567890
+        let nomorWA = "+62 858-3214-6120"; 
+
+        // 3. Susun template pesan teks otomatis untuk WhatsApp
+        let teksKirim = `Halo Arina Bouquet, saya ingin memesan:%0A%0A` +
+                        `*Produk:* ${namaProduk}%0A` +
+                        `*Warna Kertas (Wrapping):* ${warnaWrapping}%0A` +
+                        `*Isi Kartu Ucapan:* "${ucapan}"%0A%0A` +
+                        `Mohon info total harga dan ongkirnya ya, terima kasih!`;
+
+        // 4. Buka link WhatsApp di tab baru
+        let urlWhatsApp = `https://api.whatsapp.com/send?phone=${nomorWA}&text=${teksKirim}`;
+        window.open(urlWhatsApp, '_blank');
+    });
+</script>
