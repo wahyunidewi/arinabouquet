@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni Pelanggan - Arina Bouquet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya Khusus untuk Kartu Testimoni */
+        .testi-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .testi-card:hover {
+            transform: translateY(-5px); /* Efek melayang saat kursor di atasnya */
+        }
+        .stars {
+            color: #ffc107; /* Warna emas untuk bintang penilaian */
+            font-size: 18px;
+        }
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #f0ede9;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar mb-5">
+    <div class="container">
+        <a class="navbar-brand-custom" href="index.html">ARINA BOUQUET</a>
+        <div class="navbar-links-custom">
+            <a href="index.html" class="nav-link-item">Katalog</a>
+            <a href="custom-box.html" class="nav-link-item">Custom Box</a>
+            <a href="testimoni.html" class="nav-link-item active">Testimoni</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mb-5">
+    <div class="text-center mb-5">
+        <h1 style="color: #4a3e3d; font-weight: 700;">Apa Kata Mereka?</h1>
+        <p class="text-muted">Ulasan jujur dari pelanggan setia Arina Bouquet</p>
+    </div>
+
+    <div class="row g-4">
+        
+        <div class="col-md-4">
+            <div class="card testi-card p-4">
+                <div class="stars mb-2">★★★★★</div>
+                <p class="text-muted" style="font-size: 14px; font-style: italic;">"Buket snack-nya rapi banget! Kertas wrapping-nya kokoh dan kombinasinya estetik. Adminnya juga ramah dan pengerjaannya cepat. Bakal langganan di sini terus!"</p>
+                <hr style="color: #e0e0e0;">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Nabila" class="client-avatar" alt="Foto Pelanggan">
+                    <div>
+                        <h6 class="mb-0" style="font-weight: 600; color: #4a3e3d;">Nabila S.</h6>
+                        <small class="text-muted" style="font-size: 12px;">Pelanggan Wisuda</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card testi-card p-4">
+                <div class="stars mb-2">★★★★★</div>
+                <p class="text-muted" style="font-size: 14px; font-style: italic;">"Pesan Custom Gift Box buat kado ulang tahun sahabat. Hasilnya melebihi ekspektasi dengan budget yang pas di kantong. Penataannya estetik banget pas dibuka."</p>
+                <hr style="color: #e0e0e0;">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rizky" class="client-avatar" alt="Foto Pelanggan">
+                    <div>
+                        <h6 class="mb-0" style="font-weight: 600; color: #4a3e3d;">Rizky Aditya</h6>
+                        <small class="text-muted" style="font-size: 12px;">Pelanggan Custom Box</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card testi-card p-4">
+                <div class="stars mb-2">★★★★★</div>
+                <p class="text-muted" style="font-size: 14px; font-style: italic;">"Suka banget sama pelayanan Arina Bouquet! Kartu ucapannya ditulis dengan tulisan tangan yang rapi. Pengirimannya juga aman, buketnya tidak lecek sama sekali."</p>
+                <hr style="color: #e0e0e0;">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Dinda" class="client-avatar" alt="Foto Pelanggan">
+                    <div>
+                        <h6 class="mb-0" style="font-weight: 600; color: #4a3e3d;">Dinda Lestari</h6>
+                        <small class="text-muted" style="font-size: 12px;">Pelanggan Seminar Proposal</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
