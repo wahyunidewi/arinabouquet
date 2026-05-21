@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Gaya Khusus untuk Kartu Testimoni */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
         .testi-card {
             background-color: #ffffff;
             border-radius: 16px;
@@ -53,15 +56,14 @@
         <p class="text-muted">Ulasan jujur dari pelanggan setia Arina Bouquet</p>
     </div>
 
-    <div class="row g-4">
-        
+    <div class="row g-4 mb-5">
         <div class="col-md-4">
             <div class="card testi-card p-4">
                 <div class="stars mb-2">★★★★★</div>
                 <p class="text-muted" style="font-size: 14px; font-style: italic;">"Buket snack-nya rapi banget! Kertas wrapping-nya kokoh dan kombinasinya estetik. Adminnya juga ramah dan pengerjaannya cepat. Bakal langganan di sini terus!"</p>
                 <hr style="color: #e0e0e0;">
                 <div class="d-flex align-items-center gap-3">
-                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=" class="client-avatar" alt="Foto Pelanggan">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ignasia" class="client-avatar" alt="Foto Pelanggan">
                     <div>
                         <h6 class="mb-0" style="font-weight: 600; color: #4a3e3d;">Ignasia Nai</h6>
                         <small class="text-muted" style="font-size: 12px;">Pelanggan Wisuda</small>
@@ -99,8 +101,18 @@
                 </div>
             </div>
         </div>
+    </div> 
 
-    </div> <div class="row mt-5 justify-content-center">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-10 text-center">
+            <h3 class="mb-4" style="color: #4a3e3d; font-weight: 600;">Daftar Ulasan Pembeli Terbaru</h3>
+            <div class="table-responsive" style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <iframe src="https://docs.google.com/spreadsheets/d/1I_6NJ7UhNRmopSYAzVhbTHUk1flyytQmFY1TK8r2-pc/preview" width="100%" height="400" style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card p-4 border-0" style="background-color: #fcfbfa; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
                 <h4 class="text-center mb-3" style="color: #4a3e3d; font-weight: 600;">Bagikan Pengalamanmu</h4>
@@ -133,17 +145,20 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="form-label small text-muted">Ulasan Kamu</label>
+                        <label class="form-label small text-muted">Ulasan Anda</label>
                         <textarea class="form-control" rows="3" style="border-radius: 8px;" placeholder="Tulis masukan atau kesanmu terhadap pelayanan kami..." required></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="btn text-white w-50" style="background-color: #4a3e3d; border-radius: 8px; font-weight: 600;">
-                            Kirim Ulasan
-                        </button>
+                        <a href="LINK_GOOGLE_FORM_ANDA" target="_blank" class="btn text-white w-50" style="background-color: #4a3e3d; border-radius: 8px; font-weight: 600; padding: 10px; text-decoration: none; display: inline-block;">
+                            Isi Ulasan Sekarang
+                        </a>
                     </div>
                 </form>
             </div>
         </div>
-    </div> </div> </body>
+    </div>
+</div>
+
+</body>
 </html>
