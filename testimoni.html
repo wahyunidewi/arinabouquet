@@ -69,6 +69,75 @@
             transform: translateY(-2px);
         }
     </style>
+
+    <style>
+    .section-galeri { margin-top: 50px; padding: 20px; font-family: sans-serif; }
+    .section-galeri h2 { color: #4e342e; text-align: center; margin-bottom: 30px; }
+    
+    .grid-galeri { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 20px; 
+    }
+    
+    .card-karya { 
+        border: 2px solid #e0d8d0; 
+        border-radius: 15px; 
+        padding: 10px; 
+        background: #fff;
+        transition: transform 0.3s ease;
+    }
+    
+    .card-karya:hover { transform: translateY(-10px); border-color: #8d6e63; }
+    
+    .card-karya img, .card-karya video { 
+        width: 100%; 
+        height: 250px; 
+        object-fit: cover; 
+        border-radius: 10px; 
+    }
+
+    /* Tampilan Modal */
+    .modal { display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; }
+    .modal img { max-width: 80%; max-height: 80%; border: 3px solid white; }
+    .tutup-btn { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+</style>
+
+<section class="section-galeri">
+    <h2>Galeri Hasil Karya Arina Bouquet</h2>
+    <div class="grid-galeri">
+        <div class="card-karya">
+            <img src="bouquet-uang.jpg" onclick="bukaModal(this.src)" alt="Buket 1">
+        </div>
+        <div class="card-karya">
+            <img src="tulip-putih.jpg" onclick="bukaModal(this.src)" alt="Buket 2">
+        </div>
+        <div class="card-karya">
+            <img src="mawar-merah.jpg" onclick="bukaModal(this.src)" alt="Buket 2">
+        </div>
+        
+        <div class="card-karya">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<div id="modalGaleri" class="modal">
+    <span class="tutup-btn" onclick="tutupModal()">&times;</span>
+    <img id="modalImg" src="">
+</div>
+
+<script>
+    function bukaModal(src) {
+        document.getElementById('modalGaleri').style.display = 'flex';
+        document.getElementById('modalImg').src = src;
+    }
+    function tutupModal() {
+        document.getElementById('modalGaleri').style.display = 'none';
+    }
+</script>
 </head>
 <body>
 
